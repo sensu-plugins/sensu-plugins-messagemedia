@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-messagemedia/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-messagemedia)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-messagemedia/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-messagemedia)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-messagemedia.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-messagemedia)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-messagemedia](https://codeship.com/projects/c6a2a520-edb0-0132-f6c3-5a51cb58650a/status?branch=master)](https://codeship.com/projects/84063)
 
 ## Functionality
 

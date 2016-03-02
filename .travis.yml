@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-messagemedia.gemspec
+- gem install sensu-plugins-messagemedia-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: iJtMDxyagIswai/7HeY/8to4bIimaXvl0a3gd9JR8HjH/1DmUM28IbXKO4L7MsFyD5V7TEnpiwPyd8Drfy9Qztgb82wYkb+Re9ZJMS+NPdEuNCAS4wH2BPKCFwFrVtSc9EmU9f2QL/hC/yltEpA1sJDh4q8q8YGqHYmUCfjj1bc=
+  gem: sensu-plugins-messagemedia
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-messagemedia
